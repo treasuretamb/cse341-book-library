@@ -1,0 +1,40 @@
+### Get all books
+GET http://localhost:8080/books
+
+### Get book by ID
+GET http://localhost:8080/books/PASTE_ID_HERE
+
+### Create a book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "genre": "Classic",
+  "year": 1925,
+  "isbn": "9780743273565",
+  "description": "A story of wealth and obsession in the Jazz Age.",
+  "rating": 4,
+  "status": "read",
+  "coverUrl": "https://example.com/gatsby.jpg"
+}
+
+### Update a book
+PUT http://localhost:8080/books/PASTE_ID_HERE
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "genre": "Classic",
+  "year": 1925,
+  "isbn": "9780743273565",
+  "description": "Updated description.",
+  "rating": 5,
+  "status": "read",
+  "coverUrl": ""
+}
+
+### Delete a book
+DELETE http://localhost:8080/books/PASTE_ID_HERE
