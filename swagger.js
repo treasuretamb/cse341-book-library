@@ -5,8 +5,8 @@ const doc = {
     title: 'Book Library API',
     description: 'API for managing a personal book library'
   },
-  host: 'localhost:8080',
-  schemes: ['http', 'https']
+  host: 'cse341-book-library.onrender.com',
+  schemes: ['https']
 };
 
 const outputFile = './swagger.json';
