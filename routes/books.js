@@ -7,11 +7,12 @@ const {
   updateBook,
   deleteBook
 } = require('../controllers/books');
+const { isAuthenticated } = require('../middleware/auth');
 
 router.get('/', getAllBooks);
 router.get('/:id', getBookById);
-router.post('/', createBook);
-router.put('/:id', updateBook);
-router.delete('/:id', deleteBook);
+router.post('/', isAuthenticated, createBook);
+router.put('/:id', isAuthenticated, updateBook);
+router.delete('/:id', isAuthenticated, deleteBook);
 
 module.exports = router;

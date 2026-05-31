@@ -10,6 +10,16 @@
   "schemes": [
     "https"
   ],
+  "securityDefinitions": {
+    "OAuth2": {
+      "type": "oauth2",
+      "authorizationUrl": "https://cse341-book-library.onrender.com/auth/github",
+      "flow": "implicit",
+      "scopes": {
+        "user:email": "Read user email"
+      }
+    }
+  },
   "paths": {
     "/books/": {
       "get": {
@@ -357,6 +367,46 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/auth/github": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/github/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/auth/status": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

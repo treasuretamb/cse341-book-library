@@ -77,3 +77,19 @@ Content-Type: application/json
 
 ### Delete an author
 DELETE http://localhost:8080/authors/PASTE_ID_HERE
+
+### Test protected route without login (should get 401)
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "Test Book",
+  "author": "Test Author",
+  "genre": "Test",
+  "year": 2024,
+  "isbn": "1234567890",
+  "description": "Test description",
+  "rating": 3,
+  "status": "read",
+  "coverUrl": ""
+}
