@@ -38,3 +38,42 @@ Content-Type: application/json
 
 ### Delete a book
 DELETE http://localhost:8080/books/PASTE_ID_HERE
+
+### Get all authors
+GET http://localhost:8080/authors
+
+### Get author by ID
+GET http://localhost:8080/authors/PASTE_ID_HERE
+
+### Create an author
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{
+  "firstName": "Stephen",
+  "lastName": "King",
+  "nationality": "American",
+  "birthYear": 1947,
+  "genre": "Horror",
+  "bio": "Stephen Edwin King is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels.",
+  "website": "https://stephenking.com",
+  "activeYears": "1974-present"
+}
+
+### Update an author
+PUT http://localhost:8080/authors/PASTE_ID_HERE
+Content-Type: application/json
+
+{
+  "firstName": "Stephen",
+  "lastName": "King",
+  "nationality": "American",
+  "birthYear": 1947,
+  "genre": "Horror",
+  "bio": "Updated bio here.",
+  "website": "https://stephenking.com",
+  "activeYears": "1974-present"
+}
+
+### Delete an author
+DELETE http://localhost:8080/authors/PASTE_ID_HERE
